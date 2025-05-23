@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="auth-container">
+    <button id="signInButton">Sign In Anonymously</button>
+    <div id="userDetails"></div>
+  </div>
+
+  <div id="room-controls">
+    <input type="text" id="room-id" placeholder="Enter Room ID">
+    <button id="create-room">Create Room</button>
+    <button id="join-room">Join Room</button>
+  </div>
+
+  <div id="active-room-info" style="display: none;">
+    <p>Current Room: <span id="currentRoomDisplay"></span></p>
+    <button id="leaveRoomButton">Leave Room</button>
+  </div>
+
+  <div id="chat-area">
+    <!-- Messages will be displayed here -->
+  </div>
+
+  <div id="message-input" style="display: none;">
+    <input type="text" id="message" placeholder="Type your message...">
+    <button id="send-message">Send</button>
+    <button id="selectFileButton">Send File/Image</button>
+    <input type="file" id="fileInput" style="display: none;"> <!-- Hidden file input -->
+    <div id="upload-progress-area" style="display: none;">Uploading: <span id="progress-percentage">0</span>%</div>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  <!-- Your script.js -->
+  <script src="script.js"></script>
+</body>
+</html>

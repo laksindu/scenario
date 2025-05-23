@@ -1,0 +1,288 @@
+/* General Styling */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#app-container {
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Auth Container */
+#auth-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#signInButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#signInButton:hover {
+  background-color: #0056b3;
+}
+
+#userDetails {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Room Controls */
+#room-controls {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+#room-controls input[type="text"],
+#room-controls button {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#room-controls button {
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+#room-controls button:hover {
+  background-color: #218838;
+}
+
+/* Active Room Info */
+#active-room-info {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#currentRoomDisplay {
+  font-weight: bold;
+}
+
+#leaveRoomButton {
+  padding: 8px 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#leaveRoomButton:hover {
+  background-color: #c82333;
+}
+
+/* Chat Area */
+#chat-area {
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 400px;
+  overflow-y: auto;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.message-item {
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.my-message {
+  background-color: #d1e7fd; /* Light blue */
+  margin-left: auto; /* Align to right */
+  width: fit-content;
+  max-width: 70%;
+  text-align: right;
+}
+
+.other-message {
+  background-color: #e9ecef; /* Light gray */
+  margin-right: auto; /* Align to left */
+  width: fit-content;
+  max-width: 70%;
+  text-align: left;
+}
+
+.message-item strong { /* Sender name/UID */
+  font-weight: bold;
+}
+
+.message-item .timestamp {
+  font-size: 0.8em;
+  color: #666;
+  margin-left: 5px;
+  display: inline-block; /* Keeps it on the same line nicely */
+}
+.my-message .timestamp {
+  margin-right: 5px; /* Adjust for right-aligned messages */
+  margin-left: 0;
+}
+
+
+.message-item .delete-button {
+  background: none;
+  border: none;
+  color: #ff0000a1;
+  font-size: 0.8em;
+  cursor: pointer;
+  padding: 0 5px;
+  margin-left: 5px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.message-item:hover .delete-button {
+  opacity: 1;
+}
+.my-message .delete-button {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+
+/* Message Input Area */
+#message-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+#message-input input[type="text"] {
+  flex-grow: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+#message-input button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin-right: 5px;
+}
+#message-input button:hover {
+  background-color: #0056b3;
+}
+#message-input #selectFileButton {
+    background-color: #17a2b8;
+}
+#message-input #selectFileButton:hover {
+    background-color: #138496;
+}
+
+
+/* Uploaded Images */
+.message-item img {
+  max-width: 100%; /* Relative to message bubble */
+  height: auto;
+  max-height: 200px; /* Absolute max height */
+  display: block;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+
+/* File Links */
+.message-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+.message-item a:hover {
+  text-decoration: underline;
+}
+
+/* Upload Progress */
+#upload-progress-area {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #d1ecf1;
+  border: 1px solid #bee5eb;
+  border-radius: 4px;
+  color: #0c5460;
+  font-size: 0.9em;
+}
+
+/* Responsive Design (Basic) */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  #app-container {
+    padding: 15px;
+  }
+  #chat-area {
+    height: 300px;
+  }
+  #message-input {
+    flex-direction: column;
+  }
+  #message-input input[type="text"] {
+    margin-bottom: 10px;
+    width: calc(100% - 24px); /* Account for padding */
+  }
+  #message-input button {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .my-message, .other-message {
+    max-width: 90%; /* Allow messages to take more width */
+  }
+}
+
+/* Hide elements that should be initially hidden by JS */
+/* These are just fallbacks, JS should primarily handle visibility */
+#room-controls[style*="display: none"],
+#active-room-info[style*="display: none"],
+#message-input[style*="display: none"],
+#upload-progress-area[style*="display: none"] {
+  /* Styles here are less critical as JS controls display */
+}
+#fileInput[style*="display: none"] {
+    /* This is expected to be display: none */
+}
+
+/* Ensure auth-container, userDetails, chat-area are initially visible if needed */
+/* (or styled such that their visibility is controlled by JS state) */
+#auth-container {
+    /* Default visibility is fine */
+}
+#userDetails {
+    /* Default visibility is fine */
+}
+#chat-area[style*="display: none"] {
+    /* JS will make this block when signed in */
+}
